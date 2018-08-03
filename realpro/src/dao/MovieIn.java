@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import vo.Movie;
 import vo.MovieImg;
 import vo.MovieJ;
+import vo.Review;
 
 public class MovieIn {
 	private Connection con;
@@ -32,6 +33,7 @@ public class MovieIn {
 		try {
 			if(funIdx == 0) reob = show((Movie) ob);
 			if(funIdx == 1) reob = showImg((Movie) ob);
+			if(funIdx == 2) reob = showStar((Movie) ob);
 		}catch(SQLException e) {
 			e.printStackTrace();
 			System.out.println("DB 관련 예외 발생 : " + e.getMessage() );
@@ -120,6 +122,23 @@ public class MovieIn {
 		con.close();
 		return mi;
 	}
+	public Review showStar(Movie m) throws SQLException {
+		setConn();
+		String sql = "select a.m_num ,round(AVG(r_star), 1) from movie a, movie_review b where a.M_NUM = b.M_NUM and a.M_NUM =? group by a.m_num";
+		pstmt = con.prepareStatement(sql);
+		pstmt.setInt(1, m.getM_num());
+		rs = pstmt.executeQuery();
+		Review r = null;
+		if(rs.next()) {
+			r = new Review();
+			r.setStar(rs.getDouble("round(AVG(r_star),1)"));
+		}
+		rs.close();
+		pstmt.close();
+		con.close();
+		return r;
+		}
+	}
 /*public static void main (String[] args) {
 		Movie m = new Movie(1);
 		MovieIn k = new MovieIn();
@@ -130,4 +149,4 @@ public class MovieIn {
 		System.out.println(t.getDate());
 	}
 */
-}
+

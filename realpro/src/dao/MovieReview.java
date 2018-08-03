@@ -86,7 +86,7 @@ public class MovieReview {
 			rw.setTitle(rs.getString("r_title"));
 			rw.setContent(rs.getString("r_content"));
 			rw.setDate(rs.getString("r_date").substring(0, 10));
-			rw.setStar(rs.getInt("r_star"));
+			rw.setStar(rs.getDouble("r_star"));
 			rl.add(rw);
 		}
 		rs.close();
@@ -106,7 +106,7 @@ public class MovieReview {
 		pstmt.setInt(2, r.getM_num());
 		pstmt.setString(3, r.getTitle());
 		pstmt.setString(4, r.getContent());
-		pstmt.setInt(5, r.getStar());
+		pstmt.setDouble(5, r.getStar());
 		pstmt.executeUpdate();
 		con.commit();
 		System.out.println("등록 성공");

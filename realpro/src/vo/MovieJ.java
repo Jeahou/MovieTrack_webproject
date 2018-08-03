@@ -15,6 +15,7 @@ public class MovieJ {
 	private String rt;
 	private int pri;
 	
+	
 	public MovieJ() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -25,7 +26,7 @@ public class MovieJ {
 		this.name = name;
 		this.pop = pop;
 	}
-	
+
 	public MovieJ(String name, String pop) {
 		super();
 		this.name = name;
@@ -48,6 +49,7 @@ public class MovieJ {
 		this.rt = rt;
 		this.pri = pri;
 	}
+	
 	
 	public MovieJ(String name, String avi, String pop, String date, String type, String dir, String act1, String act2,
 			String act3, String grd,  int pri, String rt) {
@@ -144,6 +146,7 @@ public class MovieJ {
 	public void setAvi(String avi) {
 		this.avi = avi;
 	}
+	
 	
 	
 	

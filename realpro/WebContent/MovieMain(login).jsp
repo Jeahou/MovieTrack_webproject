@@ -88,6 +88,7 @@ display : inline;
                                                             
                                <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
                               		<li class="nav-item"><a class="nav-link">${mem.nikname}</a></li>
+                              		<li class="nav-item"><a class="nav-link">${mem.point}</a></li>
 	                                    <li class="nav-item">
 	                                     <input type = "button" name = "logType" class = "btn my-2 my-sm-2" value = "sign in"
 	                                     onclick="location.href='Movielogin.jsp'">
@@ -112,11 +113,11 @@ display : inline;
 		 <h2 class="bd-title">the latest</h2>
             <div class="StreamImage00">
                 <div class="StreamImage">
-                   <a href="#"><img src="m_1.jpg" class="imageslide"/></a>
-                   <a href="#"><img src="m_2.jpg" class="imageslide"/></a>
+                   <a href="MovieCate(in).jsp"><img src="busanpop.jpg" class="imageslide"/></a>
+                   <a href="#"><img src="ampop.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_3.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_4.jpg" class="imageslide"/></a>
-                   <a href="#"><img src="m_5.jpg" class="imageslide"/></a>
+                   <a href="#"><img src="milpop.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_6.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_7.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_8.jpg" class="imageslide"/></a>
@@ -141,8 +142,8 @@ display : inline;
 			<div class="tab-pane fade show active" id="nav-home" role="tabpanel"
 				aria-labelledby="nav-home-tab">
 				<ul>
-					<li><img src="m_1.jpg" class="imageslide" /><p>1위</p></li>
-					<li><img src="m_2.jpg" class="imageslide" /><p>2위</p></li>
+					<li><img src="busanpop.jpg" class="imageslide" /><p>1위</p></li>
+					<li><img src="ampop.jpg" class="imageslide" /><p>2위</p></li>
 					<li><img src="m_3.jpg" class="imageslide" /><p>3위</p></li>
 				</ul>
 			</div>
@@ -150,7 +151,7 @@ display : inline;
 				aria-labelledby="nav-profile-tab">
 				<ul>
 					<li><img src="m_4.jpg" class="imageslide" /><p>1위</p></li>
-					<li><img src="m_5.jpg" class="imageslide" /><p>2위</p></li>
+					<li><img src="milpop.jpg" class="imageslide" /><p>2위</p></li>
 					<li><img src="m_6.jpg" class="imageslide" /><p>3위</p></li>
 				</ul>
 				</div>

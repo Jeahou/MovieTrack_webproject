@@ -28,14 +28,14 @@ public class Point extends HttpServlet {
 
         HttpSession session = request.getSession();
 
-        String page = "login.jsp";
+        String page = "MovieMain.jsp";
 
         if(id!=null){
             Cus UpdatePoint = service.UpdatePoint(new Cus(id, point));
 
             if(UpdatePoint!=null){
                 session.setAttribute("point", point + " 충전이 완료되었습니다");
-                page = "login.jsp";
+                page = "MovieMain.jsp";
             }
 
             else{

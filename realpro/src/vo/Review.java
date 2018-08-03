@@ -8,9 +8,9 @@ public class Review {
 	private String title;
 	private String content;
 	private String date;
-	private int star;
+	private double star;
 	
-	public Review(String name, int c_num, int m_num, int r_num, String title, String content, String date, int star) {
+	public Review(String name, int c_num, int m_num, int r_num, String title, String content, String date, double star) {
 		super();
 		this.name = name;
 		this.c_num = c_num;
@@ -21,13 +21,18 @@ public class Review {
 		this.date = date;
 		this.star = star;
 	}
-
-	public Review(String name, int m_num, String title, String content, int star) {
+    
+	public Review(String name, int m_num, String title, String content, double star) {
 		super();
 		this.name = name;
 		this.m_num = m_num;
 		this.title = title;
 		this.content = content;
+		this.star = star;
+	}
+	
+	public Review(double star) {
+		super();
 		this.star = star;
 	}
 
@@ -97,11 +102,11 @@ public class Review {
 		this.date = date;
 	}
 
-	public int getStar() {
+	public double getStar() {
 		return star;
 	}
 
-	public void setStar(int star) {
+	public void setStar(double star) {
 		this.star = star;
 	}
 	

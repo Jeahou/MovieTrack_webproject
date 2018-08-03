@@ -165,6 +165,7 @@ display : inline;
                                                             
 	                             <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
 	                                   <li class="nav-item"><a class="nav-link">${mem.nikname}</a></li>
+	                                   <li class="nav-item"><a class="nav-link">${mem.point}</a></li>
 	                                    <li class="nav-item">
 	                                     <input type = "button" name = "logType" class = "btn my-2 my-sm-2" value = "sign in"
 	                                     onclick="location.href='Movielogin.jsp'">
@@ -187,6 +188,7 @@ display : inline;
 		
 	<div class="container">
 	<h1>${MovieI.name}</h1>
+	<h3>별점 : ${MovieStar.star}</h3>
 		<div class="row">
 		<div class="col-md-6 col-xs-6 text-center" style="margin-top:7%">
 			<ul class="list-group bg-dark" style="width:270px">

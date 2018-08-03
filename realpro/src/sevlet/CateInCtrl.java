@@ -52,10 +52,12 @@ public class CateInCtrl extends HttpServlet {
 			Review r = new Review(movN);
 			MovieImg i = service.showImg(m);
 			MovieJ j = service.show(m);
+			Review st = service.showStar(m);
 			ArrayList<Review> rl = service2.showReview(r);
 			s.setAttribute("MovieReview", rl);
 			s.setAttribute("MovieI", j);
 			s.setAttribute("MovieImg", i);
+			s.setAttribute("MovieStar", st);
 			page = "MovieCate(in).jsp";
 		}
 		request.getRequestDispatcher(page).forward(request, response);

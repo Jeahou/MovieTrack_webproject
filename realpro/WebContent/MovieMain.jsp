@@ -44,7 +44,6 @@ display : inline;
         });
       var mem ="${mem.id}";
   	  if(mem != ""){
-  		  alert("환영합니다. " +mem+"님");
   		$("input[name=logType]").attr("value","sign out").attr("onclick","location.href='Logout.do'");
   	  }
    
@@ -88,6 +87,7 @@ display : inline;
                                                             
                                <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
                                     <li class="nav-item"><a class="nav-link">${mem.nikname}</a></li>
+                                    <li class="nav-item"><a class="nav-link" href = "pointCharge.jsp">${mem.point}</a></li>
 	                                    <li class="nav-item">
 	                                     <input type = "button" name = "logType" class = "btn my-2 my-sm-2" value = "sign in"
 	                                     onclick="location.href='Movielogin.jsp'">
@@ -116,7 +116,7 @@ display : inline;
                    <a href="#"><img src="ampop.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_3.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_4.jpg" class="imageslide"/></a>
-                   <a href="#"><img src="m_5.jpg" class="imageslide"/></a>
+                   <a href="#"><img src="milpop.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_6.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_7.jpg" class="imageslide"/></a>
                    <a href="#"><img src="m_8.jpg" class="imageslide"/></a>
@@ -150,7 +150,7 @@ display : inline;
 				aria-labelledby="nav-profile-tab">
 				<ul>
 					<li><img src="m_4.jpg" class="imageslide" /><p>1위</p></li>
-					<li><img src="m_5.jpg" class="imageslide" /><p>2위</p></li>
+					<li><img src="milpop.jpg" class="imageslide" /><p>2위</p></li>
 					<li><img src="m_6.jpg" class="imageslide" /><p>3위</p></li>
 				</ul>
 				</div>

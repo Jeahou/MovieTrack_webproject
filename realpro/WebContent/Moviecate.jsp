@@ -46,7 +46,8 @@ display : inline;
        var mem = "${mem.id}";
        if(mem != ""){
    		  $("input[name=logType]").attr("value","sign out").attr("onclick","location.href='Logout.do'");
-   	  }
+   	   }
+ 
     });
 
 </script>
@@ -88,6 +89,7 @@ display : inline;
                                                             
 	                             <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
 	                                    <li class="nav-item"><a class="nav-link">${mem.nikname}</a></li>
+	                                    <li class="nav-item"><a class="nav-link">${mem.point}</a></li>
 	                                    <li class="nav-item">
 	                                     <input type = "button" name = "logType" class = "btn my-2 my-sm-2" value = "sign in"
 	                                     onclick="location.href='Movielogin.jsp'">

@@ -141,9 +141,8 @@ public class MovieIndex {
 	public ArrayList<MovieJ> showRank() throws SQLException {
 		ArrayList<MovieJ> rlist = new ArrayList<MovieJ>();	
 		setConn();
-		String sql = "select a.m_num, m_nam, m_pop " 
-				+ "from movie a, (select m_num, AVG(r_star) avgStar "
-				+ "from (select a.*, b.r_star  from movie a, movie_review b where a.M_NUM = b.M_NUM) GROUP by m_num) b, movie_img c " 
+		String sql = "select a.m_num, m_nam, m_pop from movie a, (select m_num, AVG(r_star) avgStar from "
+				+ "(select a.*, b.r_star  from movie a, movie_review b where a.M_NUM = b.M_NUM) GROUP by m_num) b, movie_img c "
 				+ "where a.m_num = b.m_num and a.m_num = c.m_num order by avgstar desc";
 		pstmt = con.prepareStatement(sql);
 		rs = pstmt.executeQuery();
